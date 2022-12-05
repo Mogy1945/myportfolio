@@ -1,0 +1,37 @@
+@use '../../styles/DEFINITION.scss';
+
+.header {
+  @include DEFINITION.flexSetRow;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5rem;
+  width: 100vw;
+  background-color: rgb(46, 132, 161);
+  color: rgb(245, 245, 245);
+  .listContainer {
+    @include DEFINITION.flexSetRow;
+
+    li {
+      margin-left: DEFINITION.$marginLeftNormal;
+      transition: DEFINITION.$transitionBase;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+}
+
+//SP最適化
+@media screen and (max-width: DEFINITION.$spWidth) {
+  .header {
+    .listContainer {
+      li {
+        &:active {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+}
