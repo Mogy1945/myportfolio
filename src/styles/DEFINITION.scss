@@ -1,6 +1,8 @@
 //変数定義
 $marginTopNormal: 2rem;
 $marginLeftNormal: 2rem;
+$transitionBase: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
+$spWidth: 641px;
 
 //mixin定義
 @mixin flexSetColumn {
