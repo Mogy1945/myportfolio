@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from '../styles/Home.module.scss'
+import Header from '@/components/Header/Header'
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
         <meta name='description' content='MogyのPortfolioサイトのトップページです。' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
+      <Header></Header>
       <main className={styles.container}>
         <h1>Mogy Portfolio</h1>
 
