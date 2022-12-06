@@ -1,0 +1,53 @@
+@use '../../styles/DEFINITION.scss';
+
+.productBox {
+  @include DEFINITION.flexSetRow;
+  @include DEFINITION.box;
+  display: block;
+  padding: 0;
+  margin-top: DEFINITION.$marginTopNormal;
+  padding: 2rem 4rem;
+  width: 100%;
+
+  .productBoxContains {
+    @include DEFINITION.flexSetColumn;
+    .productBoxLeft {
+      width: 100%;
+      text-align: center;
+    }
+    .productBoxRight {
+      margin-left: DEFINITION.$marginLeftNormal;
+      margin-top: DEFINITION.$marginTopNormal;
+      width: 100%;
+      h2 {
+        font-size: 1.6rem;
+      }
+      p {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  .productBtnBox {
+    width: 100%;
+    .productBtn {
+      background-color: #b3222e;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      border-radius: 5px;
+      width: 50%;
+      margin: 0 auto;
+      transition: DEFINITION.$transitionBase;
+      box-shadow: 0px 5px 0 rgb(88, 0, 0);
+      transition: 0.3s;
+    }
+  }
+  &:hover {
+    cursor: pointer;
+    .productBtnBox {
+      .productBtn {
+        box-shadow: none;
+      }
+    }
+  }
+}
