@@ -16,7 +16,7 @@ const Skillset: React.FC<SkillData> = (skillData: SkillData) => {
           <div className={styles.skillBoxLeft}>
             <Image
               src={skillData.srcurl}
-              alt={`${skillData.head} libing standardのロゴ画像です。`}
+              alt={`${skillData.head}のロゴ画像です。`}
               width={72}
               height={72}
             />
