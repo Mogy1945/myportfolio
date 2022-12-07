@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 import styles from '../styles/Contact.module.scss'
 import Header from '@/components/Header/Header'
+import Linkbox from '@/components/Linkbox/Linkbox'
 
 export default function Form() {
   const [state, handleSubmit] = useForm('mdojqgde')
@@ -45,6 +46,32 @@ export default function Form() {
             記事一覧に戻る
           </Link>
         </main>
+
+        <div className={styles.linkContainer}>
+          <h2>LINK</h2>
+          <Linkbox
+            href='/Profile'
+            srcUrl='/img/Home/home_link_profile.png'
+            name='PROFILE'
+            detail='経歴とプロフィールを記載しています。'
+          />
+          <Linkbox
+            href='/Skillset'
+            srcUrl='/img/Home/home_link_skill.png'
+            name='SKILL-SET'
+            detail='基準を元にスキルセットを掲載しています。'
+          />
+          <Linkbox
+            href='/Product'
+            srcUrl='/img/Home/home_link_product.png'
+            name='PRODUCT'
+            detail='個人開発を行ったプロダクトを掲載してます。'
+          />
+        </div>
+
+        <Link className={styles.pageTop} href='#'>
+          <span className={styles.pageTopArrow}></span>
+        </Link>
       </>
     )
   }
@@ -158,6 +185,32 @@ export default function Form() {
           </form>
         </div>
       </main>
+
+      <div className={styles.linkContainer}>
+        <h2>LINK</h2>
+        <Linkbox
+          href='/Profile'
+          srcUrl='/img/Home/home_link_profile.png'
+          name='PROFILE'
+          detail='経歴とプロフィールを記載しています。'
+        />
+        <Linkbox
+          href='/Skillset'
+          srcUrl='/img/Home/home_link_skill.png'
+          name='SKILL-SET'
+          detail='基準を元にスキルセットを掲載しています。'
+        />
+        <Linkbox
+          href='/Product'
+          srcUrl='/img/Home/home_link_product.png'
+          name='PRODUCT'
+          detail='個人開発を行ったプロダクトを掲載してます。'
+        />
+      </div>
+
+      <Link className={styles.pageTop} href='#'>
+        <span className={styles.pageTopArrow}></span>
+      </Link>
     </>
   )
 }

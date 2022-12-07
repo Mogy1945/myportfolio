@@ -4,6 +4,7 @@ import Link from 'next/link'
 import React from 'react'
 import styles from '../styles/Profile.module.scss'
 import Header from '@/components/Header/Header'
+import Linkbox from '@/components/Linkbox/Linkbox'
 import Works from '@/components/Profile_works/Works'
 
 const Profile: React.FC = () => {
@@ -109,6 +110,29 @@ const Profile: React.FC = () => {
         {/* profileContainer */}
       </main>
       {/* container */}
+
+      <div className={styles.linkContainer}>
+        <h2>LINK</h2>
+        <Linkbox
+          href='/Skillset'
+          srcUrl='/img/Home/home_link_skill.png'
+          name='SKILL-SET'
+          detail='基準を元にスキルセットを掲載しています。'
+        />
+        <Linkbox
+          href='/Product'
+          srcUrl='/img/Home/home_link_product.png'
+          name='PRODUCT'
+          detail='個人開発を行ったプロダクトを掲載してます。'
+        />
+        <Linkbox
+          href='/Contact'
+          srcUrl='/img/Home/home_link_contact.png'
+          name='CONTACT'
+          detail='お問い合わせはこちらか、ヘッダーのSNSからお願いいたします。'
+        />
+      </div>
+
       <Link className={styles.pageTop} href='#'>
         <span className={styles.pageTopArrow}></span>
       </Link>

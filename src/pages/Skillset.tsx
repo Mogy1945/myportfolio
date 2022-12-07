@@ -3,6 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 import styles from '../styles/Skillset.module.scss'
 import Header from '@/components/Header/Header'
+import Linkbox from '@/components/Linkbox/Linkbox'
 import Skills from '@/components/Skillset_skills/Skills'
 
 const Skillset: React.FC = () => {
@@ -58,6 +59,29 @@ const Skillset: React.FC = () => {
           {/* skillContainer */}
         </div>
       </main>
+
+      <div className={styles.linkContainer}>
+        <h2>LINK</h2>
+        <Linkbox
+          href='/Profile'
+          srcUrl='/img/Home/home_link_profile.png'
+          name='PROFILE'
+          detail='経歴とプロフィールを記載しています。'
+        />
+        <Linkbox
+          href='/Product'
+          srcUrl='/img/Home/home_link_product.png'
+          name='PRODUCT'
+          detail='個人開発を行ったプロダクトを掲載してます。'
+        />
+        <Linkbox
+          href='/Contact'
+          srcUrl='/img/Home/home_link_contact.png'
+          name='CONTACT'
+          detail='お問い合わせはこちらか、ヘッダーのSNSからお願いいたします。'
+        />
+      </div>
+
       <Link className={styles.pageTop} href='#'>
         <span className={styles.pageTopArrow}></span>
       </Link>
