@@ -42,6 +42,10 @@
     }
   }
 }
+.linkContainer {
+  @include DEFINITION.flexSetColumn;
+  margin-top: DEFINITION.$marginTopNormal;
+}
 .pageTop {
   height: 50px;
   width: 50px;
