@@ -1,0 +1,37 @@
+@use '../../styles/DEFINITION.scss';
+
+.linkBox {
+  @include DEFINITION.flexSetRow;
+  @include DEFINITION.box;
+  padding: 0;
+  margin-top: DEFINITION.$marginTopNormal;
+  a {
+    padding: 2rem 4rem;
+    width: 100%;
+    .linkBoxContains {
+      @include DEFINITION.flexSetRow;
+      .linkBoxLeft {
+        height: 50%;
+        width: 20%;
+        text-align: center;
+      }
+      .linkBoxRight {
+        margin-left: DEFINITION.$marginLeftNormal;
+        width: 80%;
+
+        h2 {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
+
+//SP最適化
+@media screen and (max-width: 1000px) {
+  .linkBox {
+    @include DEFINITION.box_SP;
+    width: 80vw;
+    padding: 2rem 0;
+  }
+}
