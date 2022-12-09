@@ -5,7 +5,7 @@
   @include DEFINITION.box;
   display: block;
   padding: 0;
-  margin-top: DEFINITION.$marginTopNormal;
+  margin-top: DEFINITION.$marginTopNormal + 2;
   padding: 2rem 4rem;
   width: 100%;
 

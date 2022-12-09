@@ -16,7 +16,7 @@ const Products: React.FC<ProductData> = (productData: ProductData) => {
   return (
     <>
       <div className={styles.productBox}>
-        <Link href={productData.linkUrl} target='_blank'>
+        <Link href={productData.linkUrl}>
           <div className={styles.productBoxContains}>
             <div className={styles.productBoxLeft}>
               <Image
@@ -38,7 +38,7 @@ const Products: React.FC<ProductData> = (productData: ProductData) => {
             </div>
           </div>
           <div className={styles.productBtnBox}>
-            <p className={styles.productBtn}>このプロダクトを見る</p>
+            <p className={styles.productBtn}>プロダクトの詳細</p>
           </div>
         </Link>
       </div>
