@@ -1,11 +1,11 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Link from 'next/link'
 import React from 'react'
 import styles from '../styles/Profile.module.scss'
 import Header from '@/components/Header/Header'
 import Linkbox from '@/components/Linkbox/Linkbox'
 import Works from '@/components/Profile_works/Works'
+import Totop from '@/components/Totop/Totop'
 
 const Profile: React.FC = () => {
   return (
@@ -15,7 +15,7 @@ const Profile: React.FC = () => {
         <meta name='description' content='MogyのPortfolioサイトのプロフィールページです。' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <Header></Header>
+      <Header />
       <main className={styles.container}>
         <h1>Profile</h1>
 
@@ -104,7 +104,11 @@ const Profile: React.FC = () => {
           />
           <Works
             head='自社新テンプレート商品のコーディングと機能追加'
-            detail='自社の新しいプロダクトとして、デザインを一新したパッケージ商品にジョイン。デザインのコーディングと自社システムと繋げることにより、デザインをCMSから変更できるように調整。'
+            detail='デザインパッケージのプロダクトに参画。UIを向上させるためのJS処理を記載'
+          />
+          <Works
+            head='展示会出展フォームを作成'
+            detail='自動計算機能や、項目間の依存設定を管理画面から設定できるようにシステムを改修'
           />
         </div>
         {/* profileContainer */}
@@ -133,9 +137,7 @@ const Profile: React.FC = () => {
         />
       </div>
 
-      <Link className={styles.pageTop} href='#'>
-        <span className={styles.pageTopArrow}></span>
-      </Link>
+      <Totop />
     </>
   )
 }

@@ -1,10 +1,6 @@
 import React from 'react'
 import styles from './Works.module.scss'
-
-interface WorkData {
-  head: string
-  detail: string
-}
+import { WorkData } from '@/types/types'
 
 const Works: React.FC<WorkData> = (workData: WorkData) => {
   return (

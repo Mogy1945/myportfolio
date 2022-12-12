@@ -5,6 +5,16 @@ $transitionBase: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
 $spWidth: 641px;
 
 //mixin定義
+@mixin container {
+  padding-top: 10rem;
+  padding-bottom: 0;
+  @include flexSetColumn;
+}
+@mixin linkContainer {
+  @include flexSetColumn;
+  margin-top: $marginTopNormal;
+  padding-bottom: 5rem;
+}
 @mixin flexSetColumn {
   display: flex;
   flex-direction: column;

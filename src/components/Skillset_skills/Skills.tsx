@@ -1,12 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import styles from './Skills.module.scss'
-
-interface SkillData {
-  head: string
-  srcurl: string
-  star: string
-}
+import { SkillData } from '@/types/types'
 
 const Skillset: React.FC<SkillData> = (skillData: SkillData) => {
   return (

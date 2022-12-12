@@ -11,7 +11,7 @@ export default function Home() {
         <meta name='description' content='MogyのPortfolioサイトのトップページです。' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <Header></Header>
+      <Header />
       <main className={styles.container}>
         <h1>Mogy Portfolio</h1>
 

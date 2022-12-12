@@ -1,16 +1,14 @@
 @use 'DEFINITION';
 
 .container {
-  padding-top: 10rem;
-  @include DEFINITION.flexSetColumn;
+  @include DEFINITION.container;
 
   .comment {
     margin-top: DEFINITION.$marginTopNormal;
   }
 
   .linkContainer {
-    @include DEFINITION.flexSetColumn;
-    margin-top: DEFINITION.$marginTopNormal;
+    @include DEFINITION.linkContainer;
   }
 }
 

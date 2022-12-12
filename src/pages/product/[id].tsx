@@ -1,9 +1,9 @@
 import { GetStaticPaths, InferGetStaticPropsType, NextPage } from 'next'
 import Head from 'next/head'
-import Link from 'next/link'
 import styles from '../../styles/ProductDetail.module.scss'
 import Header from '@/components/Header/Header'
 import Linkbox from '@/components/Linkbox/Linkbox'
+import Totop from '@/components/Totop/Totop'
 import { client } from '@/libs/client'
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -84,9 +84,7 @@ const ProductDetail: NextPage<ProductPageProps> = (props: ProductPageProps) => {
         />
       </div>
 
-      <Link className={styles.pageTop} href='#'>
-        <span className={styles.pageTopArrow}></span>
-      </Link>
+      <Totop />
     </>
   )
 }

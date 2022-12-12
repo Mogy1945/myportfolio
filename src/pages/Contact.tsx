@@ -5,6 +5,7 @@ import { useState } from 'react'
 import styles from '../styles/Contact.module.scss'
 import Header from '@/components/Header/Header'
 import Linkbox from '@/components/Linkbox/Linkbox'
+import Totop from '@/components/Totop/Totop'
 
 export default function Form() {
   const [state, handleSubmit] = useForm('mdojqgde')
@@ -15,14 +16,17 @@ export default function Form() {
   const [errorEmail, setErrorEmail] = useState(false)
   const [errorMessage, setErrorMessage] = useState(false)
 
+  // const errorCode = state.errors.length
+
   if (state.succeeded) {
     return (
       <>
         <Head>
           <title>Contact | Mogy Portfolio</title>
         </Head>
-        <main className={styles.main}>
-          <h1>Thank you for your Contact!</h1>
+        <Header />
+        <main className={styles.container}>
+          <h3>Contact</h3>
           <p className={styles.comment}>
             以下の内容でお問合せを完了いたしました。返信までしばらくお待ちください。
           </p>
@@ -43,7 +47,7 @@ export default function Form() {
             </form>
           </div>
           <Link href='/' className={styles.bottomLink}>
-            記事一覧に戻る
+            ホームに戻る
           </Link>
         </main>
 
@@ -81,7 +85,7 @@ export default function Form() {
         <title>Contact | Mogy Portfolio</title>
       </Head>
       <Header />
-      <main className={styles.main}>
+      <main className={styles.container}>
         <h3>Contact</h3>
         <p className={styles.comment}>
           お問い合わせの際は、以下項目を
@@ -97,7 +101,7 @@ export default function Form() {
                 name='name'
                 type='text'
                 placeholder='例）山田太郎'
-                onBlur={(e) => {
+                onChange={(e) => {
                   const val = e.target.value
                   const valLENGTH = val.length
                   if (valLENGTH > 0) {
@@ -124,7 +128,7 @@ export default function Form() {
                 type='email'
                 name='email'
                 placeholder='例）sample@test.co.jp'
-                onBlur={(e) => {
+                onChange={(e) => {
                   const val = e.target.value
                   const valLENGTH = val.length
                   if (valLENGTH > 0) {
@@ -151,7 +155,7 @@ export default function Form() {
                 id='message'
                 name='message'
                 placeholder='例）どうしてエンジニアになろうと思ったのですか？'
-                onBlur={(e) => {
+                onChange={(e) => {
                   const val = e.target.value
                   const valLENGTH = val.length
                   if (valLENGTH > 0) {
@@ -172,6 +176,19 @@ export default function Form() {
               )}
               <ValidationError prefix='Message' field='message' errors={state.errors} />
             </div>
+            {/* {errorCode !== 0 ? (
+              <>
+                <div className={styles.box}>
+                  <p className={styles.errorText}>
+                    「E-mailアドレス」が正常な値ではありません。
+                    <br />
+                    お手数をおかけしますが、もう一度ご入力ください。
+                  </p>
+                </div>
+              </>
+            ) : (
+              ''
+            )} */}
             <div className={styles.box}>
               <input
                 type='submit'
@@ -208,9 +225,7 @@ export default function Form() {
         />
       </div>
 
-      <Link className={styles.pageTop} href='#'>
-        <span className={styles.pageTopArrow}></span>
-      </Link>
+      <Totop />
     </>
   )
 }

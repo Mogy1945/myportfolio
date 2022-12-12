@@ -2,13 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import styles from './Linkbox.module.scss'
-
-interface Linkbox {
-  href: string
-  srcUrl: string
-  name: string
-  detail: string
-}
+import { Linkbox } from '@/types/types'
 
 const Linkbox: React.FC<Linkbox> = (linkbox: Linkbox) => {
   return (

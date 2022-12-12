@@ -2,15 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import styles from './Products.module.scss'
-
-interface ProductData {
-  linkUrl: string
-  srcUrl: string
-  name: string
-  date: string
-  detail: string
-  skill: string
-}
+import { ProductData } from '@/types/types'
 
 const Products: React.FC<ProductData> = (productData: ProductData) => {
   return (

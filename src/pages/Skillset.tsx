@@ -1,10 +1,10 @@
 import Head from 'next/head'
-import Link from 'next/link'
 import React from 'react'
 import styles from '../styles/Skillset.module.scss'
 import Header from '@/components/Header/Header'
 import Linkbox from '@/components/Linkbox/Linkbox'
 import Skills from '@/components/Skillset_skills/Skills'
+import Totop from '@/components/Totop/Totop'
 
 const Skillset: React.FC = () => {
   return (
@@ -14,7 +14,7 @@ const Skillset: React.FC = () => {
         <meta name='description' content='MogyのPortfolioサイトのスキルセット一覧ページです。' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <Header></Header>
+      <Header />
       <main className={styles.container}>
         <h1>Skill-Set List</h1>
 
@@ -27,7 +27,7 @@ const Skillset: React.FC = () => {
               </div>
               <div className={styles.skillBoxRight}>
                 <p>★★★★★・・・実務の中で利用歴があり、100件以上の実績がある。</p>
-                <p>★★★★☆・・・実務の中で利用歴があり、10件以上の実績がある。</p>
+                <p>★★★★☆・・・実務の中で利用歴があり、30件以上の実績がある。</p>
                 <p>★★★☆☆・・・実務の中で利用歴がある。</p>
                 <p>★★☆☆☆・・・勉強の中で利用歴があり、プロダクトとして公開している。</p>
                 <p>★☆☆☆☆・・・勉強の中で利用歴がある。</p>
@@ -37,9 +37,9 @@ const Skillset: React.FC = () => {
           {/* skillContainerBase */}
         </div>
         <div className={styles.skillContainer}>
-          <Skills head='HTML' srcurl='/img/Skillset/skillset_img_html.png' star='★★★★★' />
-          <Skills head='CSS3' srcurl='/img/Skillset/skillset_img_css.png' star='★★★★★' />
-          <Skills head='jQuery' srcurl='/img/Skillset/skillset_img_jquery.png' star='★★★★★' />
+          <Skills head='HTML' srcurl='/img/Skillset/skillset_img_html.png' star='★★★★☆' />
+          <Skills head='CSS3' srcurl='/img/Skillset/skillset_img_css.png' star='★★★★☆' />
+          <Skills head='jQuery' srcurl='/img/Skillset/skillset_img_jquery.png' star='★★★★☆' />
           <Skills
             head='Playwright'
             srcurl='/img/Skillset/skillset_img_playwright.webp'
@@ -52,7 +52,7 @@ const Skillset: React.FC = () => {
           <Skills
             head='TypeScript'
             srcurl='/img/Skillset/skillset_img_typescript.png'
-            star='★☆☆☆☆'
+            star='★★☆☆☆'
           />
           <Skills head='TestCafe' srcurl='/img/Skillset/skillset_img_testcafe.png' star='★☆☆☆☆' />
           <Skills head='Vue' srcurl='/img/Skillset/skillset_img_vue.png' star='★☆☆☆☆' />
@@ -82,9 +82,7 @@ const Skillset: React.FC = () => {
         />
       </div>
 
-      <Link className={styles.pageTop} href='#'>
-        <span className={styles.pageTopArrow}></span>
-      </Link>
+      <Totop />
     </>
   )
 }

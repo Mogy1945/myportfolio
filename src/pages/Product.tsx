@@ -1,13 +1,13 @@
 import type { InferGetStaticPropsType, NextPage } from 'next'
 import Head from 'next/head'
-import Link from 'next/link'
 import React from 'react'
 import styles from '../styles/Product.module.scss'
 import Header from '@/components/Header/Header'
 import Linkbox from '@/components/Linkbox/Linkbox'
 import Products from '@/components/Product_products/Products'
+import Totop from '@/components/Totop/Totop'
 import { client } from '@/libs/client'
-import type { Product } from '@/types/product'
+import type { Product } from '@/types/types'
 
 export const getStaticProps = async () => {
   const product = await client.get({ endpoint: 'products_detail' })
@@ -77,9 +77,7 @@ const Profile: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ pro
         />
       </div>
 
-      <Link className={styles.pageTop} href='#'>
-        <span className={styles.pageTopArrow}></span>
-      </Link>
+      <Totop />
     </>
   )
 }
