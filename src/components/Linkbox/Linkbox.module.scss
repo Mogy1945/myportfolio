@@ -2,12 +2,10 @@
 
 .linkBox {
   @include DEFINITION.flexSetRow;
-  @include DEFINITION.box;
-  padding: 0;
   margin-top: DEFINITION.$marginTopNormal;
+
   a {
-    padding: 2rem 4rem;
-    width: 100%;
+    @include DEFINITION.box;
     .linkBoxContains {
       @include DEFINITION.flexSetRow;
       .linkBoxLeft {
@@ -28,10 +26,31 @@
 }
 
 //SP最適化
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1370px) {
   .linkBox {
-    @include DEFINITION.box_SP;
-    width: 80vw;
-    padding: 2rem 0;
+    a {
+      width: 40vw;
+    }
+  }
+}
+@media screen and (max-width: 910px) {
+  .linkBox {
+    a {
+      width: 50vw;
+    }
+  }
+}
+@media screen and (max-width: 780px) {
+  .linkBox {
+    a {
+      width: 70vw;
+    }
+  }
+}
+@media screen and (max-width: 641px) {
+  .linkBox {
+    a {
+      width: 80vw;
+    }
   }
 }

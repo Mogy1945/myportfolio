@@ -10,10 +10,13 @@
   .skillContainer,
   .skillContainerBase {
     @include DEFINITION.flexSetColumn;
+
     margin-top: DEFINITION.$marginTopNormal;
   }
 
   .skillContainerBase {
+    @include DEFINITION.box;
+
     width: 50vw;
     .skillBox {
       display: block;
@@ -22,4 +25,13 @@
 }
 .linkContainer {
   @include DEFINITION.linkContainer;
+}
+
+//SP最適化
+@media screen and (max-width: 641px) {
+  .container {
+    .skillContainerBase {
+      width: 80vw;
+    }
+  }
 }

@@ -30,6 +30,15 @@
     margin: 4rem auto 0;
     padding: 4rem 1rem;
 
+    border: 1px rgb(183, 183, 183);
+    border-radius: 5px;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 1px 2px 0 rgb(0 0 0 / 6%);
+    background-color: rgb(255, 255, 255);
+    transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
+    &:hover {
+      transform: translateY(-0.25em);
+    }
+
     form {
       display: flex;
       flex-direction: column;
