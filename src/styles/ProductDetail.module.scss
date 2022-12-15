@@ -4,7 +4,7 @@
   @include DEFINITION.container;
 
   .comment {
-    margin-top: DEFINITION.$marginTopNormal;
+    @include DEFINITION.comment;
   }
 
   .productDetailContainer {

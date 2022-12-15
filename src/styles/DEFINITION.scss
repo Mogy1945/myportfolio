@@ -5,6 +5,10 @@ $transitionBase: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
 $spWidth: 641px;
 
 //mixin定義
+@mixin comment {
+  margin-top: $marginTopNormal;
+  padding: 0 2rem;
+}
 @mixin container {
   padding-top: 10rem;
   padding-bottom: 0;
