@@ -74,16 +74,14 @@ const Profile: React.FC = () => {
                   半年間、illustrator、Photoshop、コーディングの勉強を行う。
                   <br />
                   <br />
-                  卒業後、現SaaS企業に入社。
+                  卒業後、株式会社シャノンに入社。
                   <br />
-                  自社システムを用いてWEBサイトを制作しています。（2022/11で2年経過）
+                  自社MA（マーケティングオートメーション）を絡めつつ、WEBサイトのコーデイングをしています。
                   <br />
                   <br />
-                  個人的に色々勉強中。
+                  その後、退社し、合同会社ノマドリに入社。
                   <br />
-                  触っているもの ⇒ SCSS、TestCafe、React、Next.js、microCMS...
-                  <br />
-                  学んでいきたいもの ⇒ React、Next.js、TypeScript、Tailwind.css
+                  フロントエンドエンジニアとしてWeb制作を担当。
                 </p>
               </div>
             </div>
@@ -109,6 +107,10 @@ const Profile: React.FC = () => {
           <Works
             head='展示会出展フォームを作成'
             detail='自動計算機能や、項目間の依存設定を管理画面から設定できるようにシステムを改修'
+          />
+          <Works
+            head='求人サイトを構築'
+            detail='求人サイトへの登録や、求人情報の閲覧をできるWebサイトを作成'
           />
         </div>
         {/* profileContainer */}

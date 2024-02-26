@@ -45,15 +45,16 @@ const Skillset: React.FC = () => {
             srcurl='/img/Skillset/skillset_img_playwright.webp'
             star='★★★☆☆'
           />
-          <Skills head='React' srcurl='/img/Skillset/skillset_img_react.png' star='★★☆☆☆' />
-          <Skills head='Next.js' srcurl='/img/Skillset/skillset_img_next.png' star='★★☆☆☆' />
-          <Skills head='Firebase' srcurl='/img/Skillset/skillset_img_firebase.png' star='★★☆☆☆' />
-          <Skills head='SCSS' srcurl='/img/Skillset/skillset_img_scss.png' star='★★☆☆☆' />
+          <Skills head='React' srcurl='/img/Skillset/skillset_img_react.png' star='★★★☆☆' />
+          <Skills head='Next.js' srcurl='/img/Skillset/skillset_img_next.png' star='★★★☆☆' />
           <Skills
             head='TypeScript'
             srcurl='/img/Skillset/skillset_img_typescript.png'
-            star='★★☆☆☆'
+            star='★★★☆☆'
           />
+          <Skills head='SCSS' srcurl='/img/Skillset/skillset_img_scss.png' star='★★★☆☆' />
+          <Skills head='tailwind.css' srcurl='/img/Skillset/skillset_img_firebase.png' star='★★★☆☆' />
+          <Skills head='Firebase' srcurl='/img/Skillset/skillset_img_firebase.png' star='★★☆☆☆' />
           <Skills head='TestCafe' srcurl='/img/Skillset/skillset_img_testcafe.png' star='★☆☆☆☆' />
           <Skills head='Vue' srcurl='/img/Skillset/skillset_img_vue.png' star='★☆☆☆☆' />
           {/* skillContainer */}
